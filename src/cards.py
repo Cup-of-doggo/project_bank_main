@@ -1,6 +1,3 @@
-from src.file_reader import excel_reader
-
-
 def card_number_reader(data:dict):
     """возвращает последние 4 цифры номера карты"""
     return data.get('Номер карты')
