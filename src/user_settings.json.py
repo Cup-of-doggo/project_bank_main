@@ -1,7 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
-from ticker import ticker
+from ticker.ticker import company
 
 load_dotenv()
 
@@ -19,7 +19,7 @@ def currency_rate():
     return response.json()['quotes']
 
 
-def stocks_cost():
+def stocks_cost(ticker = company):
     """Возвращает стоимость акций"""
     url = "https://www.alphavantage.co/query"
     api_key = os.getenv('API_KEY_2')
@@ -28,5 +28,5 @@ def stocks_cost():
         "symbol": ticker,
         "apikey": api_key
     }
-    response = requests.request("GET", url, headers=params)
+    response = requests.request("GET", url, params=params)
     return response.json()
