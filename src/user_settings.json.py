@@ -30,3 +30,4 @@ def stocks_cost(ticker = company):
     }
     response = requests.request("GET", url, params=params)
     return response.json()
+
