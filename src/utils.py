@@ -3,7 +3,6 @@ from typing import Optional
 import datetime
 import pandas as pd
 
-from src.file_reader import excel_reader
 
 def greetings():
     """приветствие"""

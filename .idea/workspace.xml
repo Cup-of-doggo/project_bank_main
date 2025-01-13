@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="something do">
+    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user_settings.json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_settings.json.py" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
     "Python.user_settings.json.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "C:/Users/gorde/PycharmProjects/project_bank",
+    "last_opened_file_path": "C:/Users/gorde/PycharmProjects/classes_home_work",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   },
   "keyToStringList": {
@@ -107,12 +107,29 @@
       <option name="project" value="LOCAL" />
       <updated>1736364330204</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1736602741441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736602741441</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1736603015929</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736603015929</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ff" />
     <MESSAGE value="something do" />
-    <option name="LAST_COMMIT_MESSAGE" value="something do" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
