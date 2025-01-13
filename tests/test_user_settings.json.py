@@ -1,5 +1,5 @@
 from unittest.mock import patch
-from src.
+from src.user_settings.json.py import currency_rate
 
 @patch('requests.request')
 def test_currency_rate(mock_get):
