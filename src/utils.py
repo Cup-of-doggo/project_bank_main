@@ -6,7 +6,7 @@ import pandas as pd
 
 def greetings():
     """приветствие"""
-    current_time = datetime.now()
+    current_time = datetime.datetime.now()
 
     if 00 <= current_time.hour < 6:
         greeting = "Доброй ночи"

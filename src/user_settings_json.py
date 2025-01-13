@@ -30,3 +30,5 @@ def stocks_cost(ticker):
     }
     response = requests.request("GET", url, params=params)
     return response.json()
+
+print(currency_rate())

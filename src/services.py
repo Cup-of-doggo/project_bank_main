@@ -1,4 +1,5 @@
-def simple_search(data: list[dict],user_input = str(input())):
+def simple_search(data: list[dict]):
+    user_input = str(input('Введите слова для поиска: '))
     founded_string = []
     for data_inf in data:
         for string_to_search in data_inf.values():
