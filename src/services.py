@@ -1,4 +1,5 @@
 def simple_search(data: list[dict]):
+    """Ищет транзакиию по ключевому слову"""
     user_input = str(input('Введите слова для поиска: '))
     founded_string = []
     for data_inf in data:

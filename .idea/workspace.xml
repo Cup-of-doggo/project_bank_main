@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes_13.01" />
+    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes_20.01">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +60,7 @@
     "Python tests.Python tests in test_services.py.executor": "Run",
     "Python tests.Python tests in test_user_settings_json.py.executor": "Run",
     "Python tests.Python tests in test_utils.py.executor": "Run",
+    "Python.filters.executor": "Run",
     "Python.services.executor": "Run",
     "Python.user_settings.json.executor": "Run",
     "Python.user_settings_json.executor": "Run",
@@ -173,7 +179,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736798158571</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixes_20.01">
+      <option name="closed" value="true" />
+      <created>1737383586148</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737383586148</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixes_20.01">
+      <option name="closed" value="true" />
+      <created>1737384241231</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737384241231</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +204,7 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="fixes(2)" />
     <MESSAGE value="fixes_13.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes_13.01" />
+    <MESSAGE value="fixes_20.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes_20.01" />
   </component>
 </project>
