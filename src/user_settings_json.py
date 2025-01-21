@@ -8,7 +8,7 @@ load_dotenv()
 
 def currency_rate():
     """возвращает актуальный курс валют"""
-    url = os.getenv('URL')
+    url = "https://api.exchangerate.host/live?access_key=734d4d474e3b78dc4f151803f5bf6d20"
     access_key = os.getenv('API_KEY')
     headers = {"access_key": access_key,
      "callback": "CALLBACK_FUNCTION",
