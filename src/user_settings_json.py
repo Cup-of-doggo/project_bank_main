@@ -8,15 +8,15 @@ load_dotenv()
 
 def currency_rate():
     """возвращает актуальный курс валют"""
-    url = "https://api.exchangerate.host/live?access_key=734d4d474e3b78dc4f151803f5bf6d20"
-    access_key = os.getenv('API_KEY')
-    headers = {"access_key": access_key,
-     "callback": "CALLBACK_FUNCTION",
-     "source": "RUB",
-     "currencies": "USD,AUD,CAD,PLN,MXN",
-     "format": "1"}
-    response = requests.request("GET", url, headers=headers)
-    return response.json()['quotes']
+    url = 'https://api.apilayer.com/exchangerates_data/convert'
+    headers = {'apikey': '3SpTa2DEN4SwRs6x46G8LiigAOQqON6C'}
+    params = {
+        'to': 'RUB',
+        'from': 'USD',
+        'amount': 1,
+    }
+    response = requests.request("GET", url, params=params, headers=headers)
+    return response.json()
 
 
 def stocks_cost(ticker):
@@ -30,5 +30,3 @@ def stocks_cost(ticker):
     }
     response = requests.request("GET", url, params=params)
     return response.json()
-
-print(currency_rate())

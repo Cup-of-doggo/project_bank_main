@@ -2,23 +2,20 @@ from datetime import datetime
 from typing import Optional
 import datetime
 
-from src.file_reader import excel_reader
-
 
 def greetings():
     """приветствие"""
     current_time = datetime.datetime.now()
 
-    if 00 <= current_time.hour < 6:
-        greeting = "Доброй ночи"
-    elif 6 <= current_time.hour < 12:
-        greeting = "Доброе утро"
-    elif 12 <= current_time.hour < 18:
-        greeting = "Добрый день"
-    elif 18 <= current_time.hour < 00:
-        greeting = "Добрый вечер"
-
-    return greeting
+    if 0 <= int(current_time.hour) < 6:
+        return "Доброй ночи"
+    elif 6 <= int(current_time.hour) < 12:
+        return "Доброе утро"
+    elif 12 <= int(current_time.hour) < 18:
+        return "Добрый день"
+    else:
+        18 <= int(current_time.hour) < 0
+        return "Добрый вечер"
 
 
 def category_spending(data: list[dict], category: str, date: Optional[str] = None):

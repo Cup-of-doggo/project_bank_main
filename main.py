@@ -1,4 +1,5 @@
 from src.cards import card_number_reader, expenses_sum, cashback
+from src.file_reader import excel_reader
 from src.filters import top
 from src.user_settings_json import currency_rate, stocks_cost
 from src.utils import greetings
@@ -14,11 +15,6 @@ def main(dataframe):
                 "total_spent": expenses_sum(dataframe),
                 "cashback": cashback(dataframe)
             },
-            {
-                "last_digits": card_number_reader(dataframe),
-                "total_spent": expenses_sum(dataframe),
-                "cashback": cashback(dataframe)
-            }
                   ],
         "top_transactions": top(dataframe),
         "currency_rates": currency_rate(),

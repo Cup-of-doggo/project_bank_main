@@ -1,9 +1,12 @@
-def simple_search(data: list[dict]):
+from src.file_reader import excel_reader
+
+
+def simple_search(dataframe):
     """Ищет транзакиию по ключевому слову"""
     user_input = str(input('Введите слова для поиска: '))
     founded_string = []
-    for data_inf in data:
-        for string_to_search in data_inf.values():
-            if user_input in str(string_to_search):
-                founded_string.append(data_inf)
+    if user_input in dataframe['Категория'].values or user_input in dataframe['Описание'].values:
+        founded_string.append('')
     return founded_string
+
+print(simple_search(excel_reader('operations.xlsx')))
