@@ -5,9 +5,13 @@ from src.user_settings_json import currency_rate, stocks_cost
 from src.utils import greetings
 
 
+df = excel_reader('operations.xlsx')
+
+
 def main(dataframe):
     """основная функция отвечающая за главную страницу"""
-    {
+    main = []
+    main.append({
         "greeting":greetings(),
         "cards": [
             {
@@ -40,4 +44,7 @@ def main(dataframe):
                 "price": stocks_cost("TSLA")
             }
         ]
-    }
+    })
+    return main
+
+print(main(df))

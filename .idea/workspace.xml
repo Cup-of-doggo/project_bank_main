@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes_21.01">
+    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes_31.01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/file_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user_settings_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_settings_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_cards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_file_readers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_user_settings_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_user_settings_json.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +66,7 @@
     "Python tests.Python tests in test_user_settings_json.py.executor": "Run",
     "Python tests.Python tests in test_utils.py.executor": "Run",
     "Python.cards.executor": "Run",
+    "Python.conftest.executor": "Run",
     "Python.file_reader.executor": "Run",
     "Python.filters.executor": "Run",
     "Python.main.executor": "Run",
@@ -218,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737484299742</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixes_31.01">
+      <option name="closed" value="true" />
+      <created>1738334367004</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738334367004</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -229,6 +239,7 @@
     <MESSAGE value="fixes_13.01" />
     <MESSAGE value="fixes_20.01" />
     <MESSAGE value="fixes_21.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes_21.01" />
+    <MESSAGE value="fixes_31.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes_31.01" />
   </component>
 </project>

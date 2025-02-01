@@ -1,12 +1,12 @@
-from src.file_reader import excel_reader
+import re
 
 
-def simple_search(dataframe):
+def simple_search(dataframe, user_input = input('Введите слова для поиска: ').capitalize()):
     """Ищет транзакиию по ключевому слову"""
-    user_input = str(input('Введите слова для поиска: '))
     founded_string = []
-    if user_input in dataframe['Категория'].values or user_input in dataframe['Описание'].values:
-        founded_string.append('')
-    return founded_string
-
-print(simple_search(excel_reader('operations.xlsx')))
+    regex = re.compile(user_input, re.IGNORECASE)
+    if regex.match:
+        founded_string.append(dataframe[user_input])
+        return founded_string
+    else:
+        return 'ничего не найдено'
