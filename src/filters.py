@@ -1,3 +1,6 @@
+from src.file_reader import excel_reader
+
+
 def top(dataframe):
     """возвращает топ 5 транзакций по сумме платежа"""
     sorted_df = dataframe.sort_values(by="Сумма операции")

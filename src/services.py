@@ -5,8 +5,12 @@ def simple_search(dataframe, user_input = input('Введите слова дл�
     """Ищет транзакиию по ключевому слову"""
     founded_string = []
     regex = re.compile(user_input, re.IGNORECASE)
-    if regex.match:
-        founded_string.append(dataframe[user_input])
-        return founded_string
+    for _, row in dataframe.iterrows():
+        for value in row:
+            if regex.search(str(value)):
+                founded_string.append(row.to_dict())
+                break
+    if len(founded_string) == 0:
+        return 'Ничего не найдено'
     else:
-        return 'ничего не найдено'
+        return founded_string

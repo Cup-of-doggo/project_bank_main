@@ -6,17 +6,32 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def currency_rate():
+def currency_rate_usd():
     """возвращает актуальный курс валют"""
     url = 'https://api.apilayer.com/exchangerates_data/convert'
-    headers = {'apikey': '3SpTa2DEN4SwRs6x46G8LiigAOQqON6C'}
+    API_KEY = os.getenv('API_KEY')
+    headers = {'apikey': API_KEY}
     params = {
         'to': 'RUB',
         'from': 'USD',
         'amount': 1,
     }
     response = requests.request("GET", url, params=params, headers=headers)
-    return response.json()
+    return response.json()['result']
+
+
+def currency_rate_eur():
+    """возвращает актуальный курс валют"""
+    url = 'https://api.apilayer.com/exchangerates_data/convert'
+    API_KEY = os.getenv('API_KEY')
+    headers = {'apikey': API_KEY}
+    params = {
+        'to': 'RUB',
+        'from': 'EUR',
+        'amount': 1,
+    }
+    response = requests.request("GET", url, params=params, headers=headers)
+    return response.json()['result']
 
 
 def stocks_cost(ticker):
@@ -29,4 +44,4 @@ def stocks_cost(ticker):
         "apikey": api_key
     }
     response = requests.request("GET", url, params=params)
-    return response.json()
+    return response.json()['Global Quote']['05. price']
