@@ -1,9 +1,10 @@
-from datetime import timedelta
+
+from typing import Optional
 
 import pandas as pd
 from win32ctypes.pywin32.pywintypes import datetime
 
-from src.cards import card_number_reader, expenses_sum, cashback
+from src.cards import get_cards
 from src.file_reader import excel_reader
 from src.filters import top
 from src.user_settings_json import stocks_cost, currency_rate_eur, currency_rate_usd
@@ -13,25 +14,26 @@ from src.utils import greetings
 df = excel_reader('operations.xlsx')
 
 
-def main(dataframe):
+def main(dataframe, date: Optional[str] = None):
     """основная функция отвечающая за главную страницу"""
-    main = []
-    start_date = datetime.today() - timedelta(days=10)
-    end_date = datetime.today()
-    dataframe_date = pd.to_datetime(dataframe['Дата операции'])
-    filtered_df = dataframe[(dataframe_date >= start_date) & (dataframe_date <= end_date)]
+    main_list = []
+
+    if date is None:
+        start_date = datetime.today().strftime("%Y-%m-01 00:00:00")
+        end_date = datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+    else:
+        start_date = datetime.strptime(date,"%Y-%m-%d %H:%M:%S").strftime("%Y-%m-01 00:00:00")
+        end_date = date
+
+    dataframe['Дата операции']  = pd.to_datetime(dataframe['Дата операции'], dayfirst=True)
+    filtered_df = dataframe[(dataframe['Дата операции'] >= start_date) & (dataframe['Дата операции'] <= end_date)]
     sorted_df = filtered_df.sort_values(by='Дата операции')
-    for _, row in dataframe[card_number_reader(sorted_df),expenses_sum(sorted_df),cashback(sorted_df)].iterrows():
-        card_info = {
-            "last_digits": row[card_number_reader(sorted_df)],
-            "total_spent": row[expenses_sum(sorted_df)],
-            "cashback": row[cashback(sorted_df)]
-        }
-    main.append({
+
+    main_list.append({
         "greeting":greetings(),
-        "cards": card_info
+        "cards": get_cards(sorted_df)
     })
-    main.append({
+    main_list.append({
         "top_transactions": top(sorted_df),
         "currency_rates": [currency_rate_eur(),currency_rate_usd()],
         "stock_prices": [
@@ -57,6 +59,6 @@ def main(dataframe):
             }
         ]
     })
-    return main
+    return main_list
 
-print(main(df))
+print(main(df,'2021-12-31 16:44:00'))

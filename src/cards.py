@@ -1,27 +1,10 @@
-def card_number_reader(dataframe):
-    """возвращает последние 4 цифры номера карты"""
-    return dataframe['Номер карты'].drop_duplicates()
+import pandas as pd
 
 
-def expenses_sum(dataframe):
-    """возвращает сумму расходов"""
-    expenses = []
-    expense_sum = 0
-    for data in dataframe['Сумма операции']:
-        if data < 0:
-            expenses.append(data)
-    for expense in expenses:
-        expense_sum -= expense
-    return expense_sum
-
-
-def cashback(dataframe):
-    """возвращает кэшбек"""
-    buyings = []
-    cashback = 0
-    for data in dataframe['Категория']:
-        if data != 'Переводы' and data != 'Пополнения':
-            buyings.append(dataframe['Сумма операции'])
-    for expense in buyings:
-          cashback = expense / 100 + expense / 100 * (-2)
-    return cashback
+def get_cards(operations_df: pd.DataFrame) -> list[dict]:
+    """Функция получения суммы расходов по картам"""
+    df_expenses = operations_df[operations_df["Сумма платежа"] < 0]
+    total_df = df_expenses[["Номер карты", "Сумма платежа", "Кэшбэк"]].groupby("Номер карты").sum().reset_index()
+    total_df.rename(columns={"Номер карты": "last_digits", "Сумма платежа": "total_spent", "Кэшбэк": "cashback"},
+    inplace=True)
+    return total_df.to_dict(orient="records")

@@ -1,6 +1,6 @@
 from freezegun import freeze_time
-
-from src.utils import greetings, category_spending
+from src.reports import category_spending
+from src.utils import greetings
 
 
 @freeze_time('2025.01.01')

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes_01.02">
+    <list default="true" id="b87cc4c2-77ff-45f1-88f4-0c2986edabcc" name="Changes" comment="fixes_05.02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user_settings_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_settings_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_cards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_user_settings_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_user_settings_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738435747368</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixes_05.02">
+      <option name="closed" value="true" />
+      <created>1738756419247</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738756419247</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,6 +254,7 @@
     <MESSAGE value="fixes_21.01" />
     <MESSAGE value="fixes_31.01" />
     <MESSAGE value="fixes_01.02" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes_01.02" />
+    <MESSAGE value="fixes_05.02" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes_05.02" />
   </component>
 </project>
